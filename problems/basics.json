@@ -12,11 +12,11 @@
     "task2": {
         "taskNumber" : 2,
         "description" : "Unless otherwise specified, MATLAB stores calculations in a variable named <in-line-code>ans</in-line-code>.<br/><pre>>> 7+3<br>ans = <br>&#9;10</pre>",
-        "task" : "Try assigning the <in-line-code>3*5</in-line-code> calculation to a variable named <in-line-code>m</in-line-code> as shown: <in-line-code>m = 3*5</in-line-code>",
-        "hint" : "Try assigning the value <in-line-code>3*5</in-line-code> to a variable <in-line-code>m</in-line-code>",
+        "task" : "Assign the value from the variable <in-line-code>ans</in-line-code> defined in Task 1 to a variable named <in-line-code>m</in-line-code> as shown: <in-line-code>m = ans</in-line-code>",
+        "hint" : "Try assigning the value <in-line-code>ans</in-line-code> to a variable <in-line-code>m</in-line-code>",
         "variable_text" : "m",
-        "solution" : "<in-line-code>m = 3*5</in-line-code>",
-        "raw_solution" : "m = 3*5",
+        "solution" : "<in-line-code>m = ans</in-line-code>",
+        "raw_solution" : "m = ans",
         "computed_solution" : "15"
     },
     "task3": {
