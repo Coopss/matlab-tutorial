@@ -1,0 +1,71 @@
+    <!doctype html>
+
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+      <title>MATLAB Tutorial</title>
+      <meta name="description" content="">
+      <meta name="author" content="rcooper">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <script src="js/jquery/jquery.min.js"></script>
+      <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+
+    </head>
+
+
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MATLAB Tutorial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class=" navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> -->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Problems</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            <a class="dropdown-item" href="#">Problem 1 - TODO</a>
+                            <a class="dropdown-item" href="#">Problem 2 - TODO</a>
+                            <a class="dropdown-item" href="#">Problem 3 - TODO</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="buildNo" class="nav-link">ALPHA</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Controller -->
+        <div class="container-fluid fill">
+            <div class="row vdivide">
+                <div class="col-sm-3 no-float">
+                    <div id="task-container" class="task-container">
+                    </div>
+                </div>
+                <div class="col-sm-8 no-float">
+                    <textarea id="commandWindow" class="commandWindow" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" style="border-color: rgb(255, 255, 255);"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    </html>

@@ -1,0 +1,54 @@
+
+{
+    "task1": {
+        "taskNumber" : 1,
+        "description" : "You can execute commands by entering them in the command window after the MATLAB prompt (>>) and pressing the <b>Enter</b> key.",
+        "task" : "Try multiplying the numbers 3 and 5 together with the command <in-line-code>3*5</in-line-code>.",
+        "hint" : "Use <in-line-code>*</in-line-code> to multiply two scalar numbers. <in-line-code>3*5</in-line-code>.",
+        "solution" : "<in-line-code>3*5</in-line-code>",
+        "raw_solution" : "3*5",
+        "computed_solution" : "15"
+    },
+    "task2": {
+        "taskNumber" : 2,
+        "description" : "Unless otherwise specified, MATLAB stores calculations in a variable named <in-line-code>ans</in-line-code>.<br/><pre>>> 7+3<br>ans = <br>&#9;10</pre>",
+        "task" : "Try assigning the <in-line-code>3*5</in-line-code> calculation to a variable named <in-line-code>m</in-line-code> as shown: <in-line-code>m = 3*5</in-line-code>",
+        "hint" : "Try assigning the value <in-line-code>3*5</in-line-code> to a variable <in-line-code>m</in-line-code>",
+        "variable_text" : "m",
+        "solution" : "<in-line-code>m = 3*5</in-line-code>",
+        "raw_solution" : "m = 3*5",
+        "computed_solution" : "15"
+    },
+    "task3": {
+        "taskNumber" : 3,
+        "description" : "The equals sign (<in-line-code>=</in-line-code>) in MATLAB is the assignment operator, meaning that the expression on the right of the equals sign is assigned to the variable on the left. So, when you enter <in-line-code>x = 3 + 4</in-line-code>, MATLAB first evaluates <in-line-code>3 + 4</in-line-code> and then assigns the result (<in-line-code>7</in-line-code>) to the variable <in-line-code>x</in-line-code>.",
+        "task" : "Try entering the command <in-line-code>m = m + 1</in-line-code> to see what happens.",
+        "hint" : "Enter <in-line-code>m = m + 1<in-line-code>",
+        "variable_text" : "m",
+        "solution" : "<in-line-code>m = m + 1</in-line-code>",
+        "raw_solution" : "m = m + 1",
+        "computed_solution" : "16"
+    },
+    "task4": {
+        "taskNumber" : 4,
+        "description" : "MATLAB contains built-in constants, such as <in-line-code>pi</in-line-code> to represent π. <pre>>> a = pi<br>a =<br>&#9;3.1416</pre>Also, although only four decimal places are shown for π, it is represented internally with greater precision.",
+        "task" : "Create a variable <in-line-code>x</in-line-code> with a value of <in-line-code>π/2</in-line-code>.",
+        "hint" : "Use <in-line-code>pi</in-line-code> to represent π in the calculation, <in-line-code>pi/2</in-line-code>",
+        "variable_text" : "x",
+        "solution" : "<in-line-code>x = pi/2</in-line-code>",
+        "raw_solution" : "x = pi/2",
+        "computed_solution" : "1.5708"
+    },
+    "task5": {
+        "taskNumber" : 5,
+        "description" : "MATLAB can also implicitly handle complex numbers.",
+        "task" : "Use the <in-line-code>sqrt</in-line-code> function to calculate the square root of <in-line-code>-9</in-line-code>. Assign the result to a variable named <in-line-code>z</in-line-code>.",
+        "hint" : "Pass <in-line-code>-9</in-line-code> into the <in-line-code>sqrt</in-line-code> function using parentheses. <in-line-code>sqrt(-9)</in-line-code>",
+        "variable_text" : "z",
+        "solution" : "<in-line-code>z = sqrt(-9)</in-line-code>",
+        "raw_solution" : "z = sqrt(-9)",
+        "computed_solution" : "0.0000 + 3.0000i"
+    }
+
+
+}

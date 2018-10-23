@@ -1,0 +1,98 @@
+.row.vdivide [class*='col-']:not(:last-child):after {
+    background: #e0e0e0;
+    width: 1px;
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
+}
+
+.commandWindow {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-style: normal;
+    outline:none;
+    resize: none;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+html,body {
+    height:100%;
+}
+.container-fluid {
+    display:table;
+    height: 99%;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+}
+
+.row {
+    height: 100%;
+    display: table-row;
+}
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+}
+
+.task-container {
+    font-size: 15px;
+    /* font-family: "Arial, Helvetica, sans-serif"; */
+    /* font-family: "Tahoma, Geneva, sans-serif"; */
+}
+
+.help-box {
+    font-size: 14px;
+    font-weight: 350;
+}
+
+.task-box {
+    margin:25px 0 10px;
+    overflow:hidden;
+    padding:10px 10px 10px;
+    background-color:#d9edf7;
+    border:1px solid #31708f;
+    -webkit-border-radius: 5px;
+    border-radius: 15px;
+}
+
+.task-contents {
+    margin:10px 0 0;
+}
+
+pre {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #BCBEC0;
+    background: #F1F3F5;
+    font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace
+}
+
+in-line-code {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #EFEFEF;
+    border: 1px solid #BCBEC0;
+    padding: 2px;
+    font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace
+}
+
+pre code {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border: 0px;
+    padding: 2px;
+    font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace
+}
