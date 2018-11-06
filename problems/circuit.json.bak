@@ -1,0 +1,43 @@
+
+{
+    "task1": {
+        "taskNumber" : 1,
+        "description" : "A simple linear system can be represented as a matrix. As an example: <pre>2x - y = 0<br>-2x + 5y = 0</pre> can be represented by placing the coefficients to the variables in a matrix as follows: <pre>  2 -1<br> -2  5</pre>",
+        "task" : "Put the linear system <pre>3v1 - v2 - 2v3 = -2<br>-v1 + 5v2 + 0 = 0<br>-2v1 + 0v2 + 5v3 = -3</pre> into a coefficient matrix and store under the variable <in-line-code>A</in-line-code>. In MATLAB, <in-line-code>;</in-line-code> is used to seperate rows.",
+        "hint" : "The matrix from above is represented as [2 -1; -2 5] in MATLAB",
+        "solution" : "<in-line-code>A = [3 -1 -2; -1  5  0; -2  0  5]</in-line-code>",
+        "variable_text" : "A",
+        "raw_solution" : "A = [3 -1 -2; -1  5  0; -2  0  5]",
+        "computed_solution" : "[3 -1 -2; -1  5  0; -2  0  5]"
+    },
+    "task2": {
+        "taskNumber" : 2,
+        "description" : "",
+        "task" : "Create a column vector of the right hand side of the equations and store to variable <in-line-code>B</in-line-code>. The linear systems from Task 1: <pre>3v1 - v2 - 2v3 = -2<br>-v1 + 5v2 + 0 = 0<br>-2v1 + 0v2 + 5v3 = -3</pre>",
+        "hint" : "",
+        "variable_text" : "B",
+        "solution" : "<in-line-code>B = [-2; 0; -3]</in-line-code>",
+        "raw_solution" : "B = [-2; 0; -3]",
+        "computed_solution" : "[-2; 0; -3]"
+    },
+    "task3": {
+        "taskNumber" : 3,
+        "description" : "",
+        "task" : "Concatenate matrix <in-line-code>A</in-line-code> with column-vector <in-line-code>B</in-line-code> and store into a new variable <in-line-code>C</in-line-code>.",
+        "hint" : "",
+        "variable_text" : "C",
+        "solution" : "<in-line-code>C = [A B]</in-line-code>",
+        "raw_solution" : "C = [A B]",
+        "computed_solution" : "[3 -1 -2 -2; -1  5  0 0; -2  0  5 -3]"
+    },
+    "task4": {
+        "taskNumber" : 4,
+        "description" : "",
+        "task" : "Find the <in-line-code>rref</in-line-code> of the augmented matrix <in-line-code>C</in-line-code>.",
+        "hint" : "",
+        "solution" : "<in-line-code>rref(C)</in-line-code>",
+        "raw_solution" : "rref(C)",
+        "computed_solution" : ""
+    }
+
+}

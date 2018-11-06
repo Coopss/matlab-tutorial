@@ -48,6 +48,26 @@
         "solution" : "<in-line-code>z = sqrt(-9)</in-line-code>",
         "raw_solution" : "z = sqrt(-9)",
         "computed_solution" : "0.0000 + 3.0000i"
+    },
+    "task6": {
+        "taskNumber" : 6,
+        "description" : "You can create row-vectors with multiple elements using square brackets.<pre>>> x = [3 5]<br>x =<br> 3    5</pre>",
+        "task" : "Create an row-vector named <in-line-code>x</in-line-code> with two elements in a single row: <in-line-code>7</in-line-code> and <in-line-code>9</in-line-code>",
+        "hint" : "Create a row-vector <in-line-code>x = [7 9]</in-line-code>",
+        "variable_text" : "x",
+        "solution" : "<in-line-code>x = [7 9]</in-line-code>",
+        "raw_solution" : "x = [7 9]",
+        "computed_solution" : "[7 9]"
+    },
+    "task7": {
+        "taskNumber" : 7,
+        "description" : "You can create column-vectors with multiple rows using square brackets and a <in-line-code>;</in-line-code>.<pre>>> x = [3; 5]<br>x =<br> 3<br>  5</pre>",
+        "task" : "Create a column-vector named <in-line-code>y</in-line-code> with two elements, one in each row: <in-line-code>-2</in-line-code> and <in-line-code>4</in-line-code>",
+        "hint" : "Create a column-vector with two rows: <in-line-code>y = [-2; 4]</in-line-code>",
+        "variable_text" : "y",
+        "solution" : "<in-line-code>y = [-2; 4]</in-line-code>",
+        "raw_solution" : "y = [-2; 4]",
+        "computed_solution" : "[-2; 4]"
     }
 
 

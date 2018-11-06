@@ -19,6 +19,28 @@ $(function() {
     	}
     }
 
+    function parseQueryString(query) {
+        var vars = query.split("&");
+        var query_string = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = decodeURIComponent(pair[0]);
+            var value = decodeURIComponent(pair[1]);
+            // If first entry with this name
+            if (typeof query_string[key] === "undefined") {
+                query_string[key] = decodeURIComponent(value);
+            // If second entry with this name
+            } else if (typeof query_string[key] === "string") {
+                var arr = [query_string[key], decodeURIComponent(value)];
+                query_string[key] = arr;
+            // If third or later entry with this name
+            } else {
+                query_string[key].push(decodeURIComponent(value));
+            }
+        }
+        return query_string;
+    }
+
     function waitForElementToDisplay(selector, time) {
         if(document.querySelector(selector)!=null) {
             return;
@@ -108,6 +130,12 @@ $(function() {
     }
 
     function isCorrect(uip, cip) {
+        uip = uip.replace(/\s/g, '');
+        if (uip[uip.length -1] == ';')
+            uip = uip.substring(0, uip.length-1);
+
+        console.log(uip);
+        cip = cip.replace(/\s/g, '');
         return uip == cip;
     }
 
@@ -136,6 +164,25 @@ $(function() {
         // case where everything is solved
         if (nid == null) {
             $("#task" + tid + " .card-link").click();
+            if (nextProblem[0] != null && nextProblem[0] != undefined) {
+                var tc = $('#task-container');
+                var html = `
+                <br>
+                <a href="`+ nextProblem.attr("href") +`">
+                <button type="button" id="begin-button" class="btn btn-primary btn-lg btn-block">Next Question</button>
+                </a>
+                `;
+                tc.append(html);
+            } else {
+                var tc = $('#task-container');
+                var html = `
+                <br>
+                <a href="./postsurvey.html">
+                <button type="button" id="begin-button" class="btn btn-primary btn-lg btn-block">Next</button>
+                </a>
+                `;
+                tc.append(html);
+            }
         // still some unsolved problems
         } else {
             if ($('#task' + nid) != null) {
@@ -163,6 +210,7 @@ $(function() {
     // Global prompt
     var prompt = ">> ";
     var numTasks = 0;
+    var nextProblem = null;
 
     // Set intial prompt
     $( "#commandWindow" ).val(prompt);
@@ -175,6 +223,16 @@ $(function() {
             // get latest input line
             let promptIndex = this.value.lastIndexOf(prompt) + prompt.length;
             let line = this.value.substring(promptIndex, this.value.length);
+
+            // Check for debugging case
+            // TODO: remove
+            if (isCorrect(line, "DEBUG=true")) {
+                while (getNextIncompleteTask() != null) {
+                    completeTask(getNextIncompleteTask());
+                }
+                return;
+            }
+
 
             // line not empty case
             if (line.length > 0) {
@@ -205,7 +263,7 @@ $(function() {
             this.value = this.value + "\n" + prompt;
         }
         // ensure that the text is locked to the bottom.
-        // this.scrollTop(this.scrollHeight);
+        document.getElementById("commandWindow").scrollTop = document.getElementById("commandWindow").scrollHeight
     });
 
     // Prevent deletion of the prompt and previous entries.
@@ -230,14 +288,27 @@ $(function() {
         }
     })
 
-    // Load problem set for this window
-    $.getJSON("problems/basics.json", function(json) {
-        $.each(json, function(task) {
-            insertTask(json[task]);
-            numTasks += 1;
-        });
-    });
+    var args = parseQueryString(window.location.search.substring(1));
+    var problem = args['p'];
 
+    if (problem != '') {
+        // Load problem set for this window
+        $.getJSON("problems/" + problem + ".json", function(json) {
+            $.each(json, function(task) {
+                insertTask(json[task]);
+                numTasks += 1;
+            });
+        });
+
+        // get next problem
+        nextProblem = $('a[href*=' + problem + ']').next();
+
+        // Disable clicking this in the header
+        $('a[href*=' + problem + ']').attr("href", "#");
+
+    } else {
+        console.error("Unable to load problem set: " + problem);
+    }
 })
 
 /*
